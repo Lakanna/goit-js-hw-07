@@ -16,4 +16,20 @@ function createMarkup(arr) {
 
 container.insertAdjacentHTML("afterbegin", createMarkup(galleryItems));
 
+container.addEventListener("click", handlerClick);
+
+function handlerClick(evt) {
+
+    evt.preventDefault();
+
+    if (!evt.target.classList.contains('gallery__image')) {
+        return;
+    }
+
+      var lightbox = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });  
+   
+  
+};
+
+
 console.log(galleryItems);
