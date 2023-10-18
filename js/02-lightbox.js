@@ -16,20 +16,22 @@ function createMarkup(arr) {
 
 container.insertAdjacentHTML("afterbegin", createMarkup(galleryItems));
 
-container.addEventListener("click", handlerClick);
+// container.addEventListener("click", handlerClick);
 
-function handlerClick(evt) {
+var lightbox = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 }); 
 
-    evt.preventDefault();
+// function handlerClick(evt) {
 
-    if (!evt.target.classList.contains('gallery__image')) {
-        return;
-    }
+//     evt.preventDefault();
 
-      var lightbox = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });  
+//     if (!evt.target.classList.contains('gallery__image')) {
+//         return;
+//     }
+
+       
    
   
-};
+// };
 
 
 console.log(galleryItems);
